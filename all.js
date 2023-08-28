@@ -170,7 +170,7 @@ function updateList() {
           <input type="checkbox" ${item.completed_at ? 'checked' : ''}/>
           <span>${item.content}</span>
         </label>
-        <a href="#" class="delete">X</a>
+        <a href="#" class="delete"></a>
       </li>
     `;
   });
