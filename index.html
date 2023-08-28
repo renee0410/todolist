@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>todoListAPI</title>
+	<link rel="stylesheet" href="/reset.css">
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+	<!-- 登入頁面 -->
+	<div class="logIn js-view view">
+		<div class="background">
+			<div class="logIn-block">
+				<div class="img-block">
+					<div class="logo-ig">
+						<img src="/logo_lg.svg" alt="">
+					</div>
+					<div class="img">
+						<img src="/img.svg" alt="">
+					</div>
+				</div>
+				<div class="form-block">
+					<h3>最實用的線上代辦事項服務</h3>
+					<form class="logIn-form" id="logInform">
+						<!-- email -->
+						<div class="input-container">
+							<label for="account">Email</label>
+							<input type="email" id="account" name="email" placeholder="請輸入Email">
+							<span class="hint"></span>
+						</div>
+						<!-- 密碼 -->
+						<div class="input-container">
+							<label for="password">密碼</label>
+							<input type="password" id="password" name="password" minlength="6" placeholder="請輸入密碼">
+						</div>
+						<button class="btn" type="submit">登入</button>
+					</form>
+					<a href="#" id="signHref">註冊帳號</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 註冊頁面 -->
+	<div class="signUp js-view">
+		<div class="background">
+			<div class="signUP-block">
+				<div class="img-block">
+					<div class="logo-ig">
+						<img src="/logo_lg.svg" alt="">
+					</div>
+					<div class="img">
+						<img src="/img.svg" alt="">
+					</div>
+				</div>
+				<div class="form-block">
+					<h3>註冊帳號</h3>
+					<form class="signUp-form" id="sign-form">
+						<!-- email -->
+						<div class="input-container">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" placeholder="請輸入Email" required>
+						</div>
+						<!-- 暱稱 -->
+						<div class="input-container">
+							<label for="text">您的暱稱</label>
+							<input type="text" id="text" name="nickname" placeholder="請輸入您的暱稱" required>
+						</div>
+						<!-- 密碼 -->
+						<div class="input-container">
+							<label for="pwd">密碼</label>
+							<input type="password" id="pwd" name="password" minlength="6" placeholder="請輸入密碼" required>
+						</div>
+						<!-- 再次輸入密碼 -->
+						<div class="input-container">
+							<label for="pwd2">再次輸入密碼</label>
+							<input type="password" id="pwd2" name="password2" placeholder="請再次輸入密碼" required>
+						</div>
+						<button class="btn" type="submit">註冊帳號</button>
+					</form>
+					<a href="#" id="logInBtn">登入</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 內頁 -->
+	<div class="todo js-view">
+		<div class="background">
+			<header class="header-style">
+				<span class="member"></span>
+				<a href="#" id="log-out-btn">登出</a>
+			</header>
+			<div class="container">
+				<h1>TODO LIST</h1>
+				<div class="card input">
+					<input type="text" placeholder="請輸入待辦事項" />
+					<a href="#" class="btn_add">+</a>
+				</div>
+				<div class="card card_list">
+					<ul class="tab">
+						<li class="active" data-tab="all">全部</li>
+						<li data-tab="work">待完成</li>
+						<li data-tab="done">已完成</li>
+					</ul>
+					<div class="cart_content">
+						<ul class="list">
+							<!-- <li>
+								<label class="checkbox" for="">
+									<input type="checkbox" />
+									<span>把冰箱發霉的檸檬拿去丟</span>
+								</label>
+								<a href="#" class="delete"></a>
+							</li> -->
+						</ul>
+						<div class="list_footer">
+							<p><span id="workNum"></span> 個待完成項目</p>
+							<a href="#" id="deleteBtn">清除已完成項目</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="/all.js"></script>
+</body>
+</html>

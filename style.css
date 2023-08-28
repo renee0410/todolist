@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/earlyaccess/notosanstc.css");
+@import url("https://fonts.googleapis.com/css?family=Baloo+Tamma+2:600, 700");
+* {
+	box-sizing: border-box;
+	font-family: 'Noto Sans TC';
+	color: #333;
+	position: relative;
+}
+
+html {
+	font-size: 16px;
+	-webkit-tap-highlight-color: transparent;
+}
+
+a {
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 23px;
+	color: #333333;
+}
+
+/* 切換頁面 預設隱藏 */
+.js-view {
+	display: none;
+}
+.view {
+	display: block;
+}
+
+/* 登入註冊頁面背景 */
+.logIn .background, .signUp .background {
+	min-height: 100vh;
+	background: #FFD370;
+	display: flex;
+}
+/* todo內頁背景 */
+.todo .background {
+	min-height: 100vh;
+	background: #eee;
+	display: flex;
+	background-image: linear-gradient(174deg, #ffd370 2%, #ffd370 46%, #ffffff 46%, #ffffff 100%, #e8e8e8 100%);
+	letter-spacing: 0.07em;
+}
+/* 字型大小 */
+h1 {
+	text-align: center;
+	font-size: 3rem;
+	margin-bottom: 1.5rem;
+	letter-spacing: 0.5rem;
+	font-weight: bold;
+}
+@media (max-width: 575px) {
+	h1 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+}
+h3 {
+	text-align: center;
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+label {
+	display: inline-block;
+	font-weight: 700;
+	margin-bottom: 4px;
+}
+/* input */
+input::placeholder {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 23px;
+	color: #9F9A91;
+}
+.logIn input, .signUp input {
+	border-radius: 10px;
+	padding: 12px 16px;
+	border: 0;
+}
+.todo .input {
+	padding: 4px 4px 4px 1rem;
+	display: flex;
+}
+
+
+.todo {
+	width: 100%;
+}
+
+.todo .container {
+	margin: 3rem auto 1.5rem auto;
+	padding: 0 12px;
+	width: 500px;
+}
+@media (max-width: 575px) {
+	.todo .container {
+		margin-top: 1.5rem;
+	}
+}
+
+.card {
+	margin-bottom: 0.5rem;
+	max-width: 100%;
+	padding: 1rem;
+	border-radius: 10px;
+	background: #fff;
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+input[type=text] {
+	width: 100%;
+	border: 0;
+	outline: 0;
+	font-size: 1rem;
+	padding-right: 1rem;
+}
+
+
+.btn_add {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 10px;
+	background: #333;
+	color: #fff;
+	font-size: 2rem;
+	text-decoration: none;
+}
+
+.card_list {
+	padding: 0;
+}
+
+.tab {
+	display: flex;
+	text-align: center;
+	color: #9f9a91;
+	font-size: 14px;
+}
+.tab li {
+	padding: 1rem;
+	width: 100%;
+	border-bottom: 2px solid #efefef;
+}
+.tab li.active {
+	border-bottom: 2px solid #333;
+	font-weight: bold;
+}
+
+.cart_content {
+	padding: 0.5rem 1rem 1rem 1rem;
+}
+@media (max-width: 575px) {
+	.cart_content {
+		padding: 0.5rem 1rem 0.5rem 0.5rem;
+}
+}
+
+.list li {
+	position: relative;
+	padding-right: 2rem;
+}
+@media (max-width: 575px) {
+.list li {
+		padding-right: 0;
+}
+}
+	.list li a.delete {
+	position: absolute;
+	opacity: 0;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	text-decoration: none;
+	display: block;
+	width: 1rem;
+	height: 1rem;
+	/* background: #000; */
+	background-image: url("https://i.imgur.com/7Q4RjFx.jpg");
+	background-size: contain;
+	}
+@media (max-width: 575px) {
+	.list li a.delete {
+		opacity: 1;
+		width: 12px;
+		height: 12px;
+	}
+}
+.list li:hover a.delete {
+	opacity: 1;
+}
+
+.list_footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1.5rem 2rem 1rem 0.5rem;
+	font-size: 14px;
+}
+.list_footer a {
+	color: #9f9a91;
+	text-decoration: none;
+}
+@media (max-width: 575px) {
+	.list_footer {
+		padding: 1.5rem 0 1rem 0.5rem;
+	}
+}
+
+.checkbox {
+	position: relative;
+	user-select: none;
+	width: 100%;
+	display: block;
+	padding-left: 44px;
+	cursor: pointer;
+}
+.checkbox span {
+	position: initial;
+	display: block;
+	padding: 1rem 0;
+	border-bottom: 1px solid #eee;
+	line-height: 1.5;
+}
+@media (max-width: 575px) {
+	.checkbox span {
+		padding-right: 1rem;
+	}
+}
+.checkbox input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	cursor: pointer;
+	display: block;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+.checkbox span::before {
+	content: "";
+	position: absolute;
+	left: 0.5rem;
+	top: 50%;
+	transform: translateY(-50%) scale(1);
+	height: 20px;
+	width: 20px;
+	border-radius: 5px;
+	border: 1px solid #333;
+	pointer-events: none;
+	transition: 0.3s ease;
+}
+	.checkbox span::after {
+	content: "";
+	position: absolute;
+	left: 14px;
+	top: 27%;
+	transform: rotate(45deg);
+	height: 15px;
+	width: 0.5rem;
+	border-radius: 1px;
+	border-bottom: 3px solid #ffd370;
+	border-right: 3px solid #ffd370;
+	pointer-events: none;
+	opacity: 0;
+	transition: 0.3s ease;
+}
+.checkbox input:checked ~ span {
+	color: #9f9a91;
+	text-decoration: line-through;
+}
+.checkbox input:checked ~ span::before {
+	border-color: transparent;
+	transform: translateY(-50%) scale(0);
+}
+.checkbox input:checked ~ span::after {
+	opacity: 1;
+}
+/* header樣式 */
+.header-style {
+	position: absolute;
+	width: 100%;
+	text-align: right;
+	padding: 24px 32px 0 0;
+}
+.member {
+	font-weight: 700;
+	line-height: 23px;
+	display: inline-block;
+	margin-right: 24px;
+}
+.todo header a {
+	font-weight: 400;
+}
+
+/* 登入註冊頁面 */
+/* 左邊圖片區塊 */
+.logIn-block, .signUP-block {
+	width: 796px;
+	/* 置中 */
+	margin:87px auto;
+	display: flex; 
+	justify-content: space-between;
+}
+.logo-ig {
+	text-align: center;
+}
+.logIn .img, .signUp .img {
+	margin-top: 20px;
+	text-align: center;
+}
+/* 右邊表單區塊 */
+.form-block {
+	padding-top: 62px;
+}
+.logIn-form, .signUp-form {
+	margin-top: 24px;
+}
+.input-container input {
+	width: 100%;
+}
+.hint {
+	color: #D87355;
+	font-size: 14px;
+	font-weight: 700;
+	display: inline-block;
+	margin-top: 4px;
+	display: block;
+}
+.input-container {
+	margin-bottom: 16px;
+}
+.btn {
+	padding: 12px 48px;
+	border-radius: 10px;
+	border: 0;
+	background-color: #333;
+	color: #ffffff;
+	line-height: 23.17px;
+	font-size: 16px;
+	text-align: center;
+	margin-top: 8px;
+	cursor: pointer;
+	/* 置中 */
+	left: 50%;
+	transform: translate(-50%);
+}
+.form-block a {
+	margin-top: 24px;
+	display: block;
+	text-align: center;
+}
